@@ -4,10 +4,10 @@ const managersJSON = require("./managers.json");
 class Employee {
   //Class Properties
   constructor(name, position, yearJoined, salary) {
-    this.name = "Najat";
-    this.position = "Team Leader";
-    this.yearJoined = "2023";
-    this.salary = "1000 KD";
+    this.name = name;
+    this.position = position;
+    this.yearJoined = yearJoined;
+    this.salary = salary;
   }
 
   //Class Methods
@@ -24,6 +24,7 @@ console.log(idBadge(name1));
 class Manager extends Employee {
   constructor(name, position, yearJoined, salary, bonusPercentage) {
     super((name, position, yearJoined, salary));
+    this.bonusPercentage = bonusPercentage;
   }
 
   salaryIncrease(increaseAmount) {
