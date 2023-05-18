@@ -26,15 +26,19 @@ class Manager extends Employee {
     super((name, position, yearJoined, salary));
   }
 
-  function percentage (percentage) {
-    return this.percentage * this.salary;
-  }
   salaryIncrease(increaseAmount) {
     // their is a formula for percentage
     /* P% * X = Y */
 
-    return this.manager.forEach((salary) => Employee.salary + salaryIncrease);
+    return this.manager.forEach(
+      (salary) => Employee.salary + this.bonusPercentage * this.salary
+    );
   }
 }
 
 const bonusPercentage = new Manager(90);
+/*
+function calculatePercentage(bonusPercentage) {
+  return this.bonusPercentage * this.salary;
+}
+*/
